@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tombol Uang</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+      height: 100vh;
+      background-color: #f9f9f9;
+    }
+
+    .judul {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    #tombol {
+      padding: 12px 25px;
+      background-color: red;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      position: absolute;
+      cursor: pointer;
+      transition: top 0.2s, left 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="judul">TEKAN TOMBOL WARNA MERAH UNTUK MENDAPATKAN UANG RP 200.000</div>
+  <button id="tombol">Tekan Saya</button>
+
+  <script>
+    const tombol = document.getElementById('tombol');
+
+    function pindahTempat() {
+      const maxX = window.innerWidth - tombol.offsetWidth;
+      const maxY = window.innerHeight - tombol.offsetHeight;
+      const randomX = Math.random() * maxX;
+      const randomY = Math.random() * maxY;
+
+      tombol.style.left = `${randomX}px`;
+      tombol.style.top = `${randomY}px`;
+    }
+
+    tombol.addEventListener('click', pindahTempat);
+
+    // Atur posisi awal tombol
+    window.onload = pindahTempat;
+  </script>
+
+</body>
+</html>
