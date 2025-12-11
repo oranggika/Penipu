@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Wangi ML</title>
+<style>
+    body {
+        background: #000;
+        font-family: Arial, sans-serif;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    .logo {
+        width: 150px;
+        margin-top: 20px;
+    }
+    h1 {
+        font-size: 48px;
+        margin: 20px 0;
+    }
+    .switch-row {
+        width: 250px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+    }
+    .switch {
+        position: relative;
+        width: 45px;
+        height: 22px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        background-color: #555;
+        border-radius: 22px;
+        transition: .3s;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px; width: 18px;
+        left: 2px; bottom: 2px;
+        background-color: white;
+        border-radius: 50%;
+        transition: .3s;
+    }
+    input:checked + .slider {
+        background-color: #00d466;
+    }
+    input:checked + .slider:before {
+        transform: translateX(22px);
+    }
+</style>
+</head>
+<body>
+
+<img src="https://i.ibb.co.com/9kS6tp47/new-logo-mobile-legends-bang-bang-2024-png-by-wolvesdzn-dis0mte-fullview.png" class="logo">
+
+<h1>ROOM<br>WANGI</h1>
+
+<p style="opacity:0.7;">luminUX</p>
+
+<div class="switch-row">
+    auto win
+    <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="switch-row">
+    easy enemy
+    <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="switch-row">
+    bot enemies
+    <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+<div class="switch-row">
+    external server
+    <label class="switch"><input type="checkbox"><span class="slider"></span></label>
+</div>
+
+</body>
+</html>
